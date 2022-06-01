@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./scss/style.css">
+        <title>Форма для поиска.</title>
+	</head>
+	
+	<body>
+		<div class="wrapper">
+		<form action="#" name="main" method="post">
+			<div class="border">
+				<label for="text">Поле ввода</label><br>
+				<input type="text" name="text" placeholder="Введите текст" maxlength="10" value="Вася"> 
+			</div>
+
+			<div class="border">
+				<label for="textarea">Текстовое поле</label><br>
+				<textarea name="textarea" id="" cols="30" rows="10" placeholder="Введите текст" maxlength="30"></textarea>
+			</div>
+
+			<div class="border RadioButtonWrapperStyled">
+				<div class="RadioButtonHeadStyled">Выберите вариант</div>
+				<input type="radio" name="radio" id="1" value="1" class="RadioButtonStyled">
+				<label for="1" class="RadioButtonLabelStyled">Вариант 1</label>
+				<input class="RadioButtonStyled" type="radio" name="radio" id="2" value="2">
+				<label for="2" class="RadioButtonLabelStyled">Вариант 2</label>
+				<input class="RadioButtonStyled" type="radio" name="radio" id="3" value="3">
+				<label for="3" class="RadioButtonLabelStyled">Вариант 3</label>
+			</div>
+
+			<div class="border">
+				<label for="checkbox">Выберите варианты</label><br>
+				<input type="checkbox" name="checkbox" id="c1">
+				<label for="c1">c1</label><br>
+
+				<input type="checkbox" name="checkbox" id="c2">
+				<label for="c2">c2</label><br>
+
+				<input type="checkbox" name="checkbox" id="c3">
+				<label for="c3">c3</label><br>
+
+			</div>
+
+			<div class="border SelectFileWrapper1Styled">
+				<div class="SelectFileLabelStyled">Выберите фото</div>
+				<div class="SelectFileWrapper2Styled">
+					<div class="SelectFileWrapper3Styled">
+						<input type="file" name="file" id="SelectFileStyled" class="SelectFileInputStyled" accept=".jpg, .png, .gif">
+						<div class="SelectFilePseudoButton">Выбрать</div>
+					</div>
+					<div class="SelectFilePreviewStyled" id="SelectFilePreviewStyled"></div>
+				</div>
+			</div>
+			<div class="border ">
+				<label for="select ">Выберите из списка</label><br>
+				<select name="select" id="">
+					<option>1</option>
+					<option value="2" selected>привет</option>
+					<option>3</option>
+					<option>4</option>
+				</select>
+			</div>
+
+			<div class="border ">
+				<input type="submit" value="Отправить">
+			</div>
+
+		</form>
+		</div>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	<!-- <body>
+			<p>
+				Форма поиска, которая открывается по клику на иконку, а закрывается по клику на любое место страницы, кроме самой формы. Также, закрыть форму можно по клавише эскейп (Esc) на клавиатуре. Для поля ввода поискового запроса добавляем счетчик символов.
+			</p>
+			<div class="wrapper">
+			<button class="Button">
+				<p class="open">Открыть форму поиска</p>
+				<p class="close">Закрыть форму поиска</p>
+			</button>
+			<input type="text" class="InputForm" maxlength="20">
+			<p class="ostatok">Осталось до максимума</p> 
+		</div> -->
+		<script src="./js/script.js"></script>
+	</body>
+</html>

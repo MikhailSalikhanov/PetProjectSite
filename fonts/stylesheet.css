@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Macondo';
+    src: url('Macondo-Regular.eot');
+    src: local('Macondo'), local('Macondo-Regular'),
+        url('Macondo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Macondo-Regular.woff2') format('woff2'),
+        url('Macondo-Regular.woff') format('woff'),
+        url('Macondo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
