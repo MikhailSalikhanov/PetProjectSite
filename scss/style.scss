@@ -1,0 +1,170 @@
+@use "sass:math";
+
+@function adapt($px) {
+    $result1: math.div($px, 1440) * 100;
+    $result2: $result1 + vw;
+    // $result3: math.clamp(0px, $result2, $px); 
+    @return $result2;
+};
+
+/*Reset CSS*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+.wrapper{
+    position: relative;
+    max-width: adapt(1440);
+    background: #E5E5E5;
+}
+
+.navigation{
+    position: absolute;
+    left: adapt(852);
+    top: adapt(69);
+    
+
+    &_menu{
+        width: adapt(478);
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(20);
+        line-height: adapt(30);
+        text-transform: uppercase;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.header {
+    justify-content: space-between;
+    display: flex;
+    height: adapt(696);
+
+    &_left {
+        height: 100%;
+    }
+
+    &_right {
+        height: 100%;
+
+        &_image{
+            height: 100%;
+        }
+
+
+    }
+
+    &_logo {
+        position: absolute;
+        left: adapt(110);
+        top: adapt(53);
+        height: adapt(59);
+        width: adapt(202);
+        }
+}
+
+.head {
+
+    &_title {
+        width: adapt(414);
+        height: adapt(120);
+        position: absolute;
+        left: adapt(190);
+        top: adapt(223);
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(60);
+        line-height: a(60);
+        color: #000000;
+    }
+
+    &_subtitle {
+        line-height: 140%;
+        position: absolute;
+        left: adapt(190);
+        top: adapt(373);
+        min-height: adapt(60);
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(20);
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    &_button {
+        padding: adapt(14) adapt(26);
+        gap: adapt(4);
+        position: absolute;
+        width: adapt(264);
+        height: adapt(54);
+        left: adapt(190);
+        top: adapt(455);
+        text-transform: uppercase;
+        background: #68B738;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(20);
+        color: #FFFFFF;
+    }
+}
+.main {
+
+    &_img {
+        position: absolute;
+        width: adapt(552);
+        height: adapt(499);
+        left: adapt(558);
+        top: adapt(141);
+    }
+}
+
+
+img{
+    width: 100%;
+
+}
+
+
