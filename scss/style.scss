@@ -3,7 +3,6 @@
 @function adapt($px) {
     $result1: math.div($px, 1440) * 100;
     $result2: $result1 + vw;
-    // $result3: math.clamp(0px, $result2, $px); 
     @return $result2;
 };
 
@@ -33,6 +32,8 @@ html,body{
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+    font-family: 'Oswald';
+
 }
 input,button,textarea{font-family:inherit;}
 
@@ -43,6 +44,7 @@ a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
+a{color: inherit;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
@@ -51,7 +53,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .wrapper{
     position: relative;
     max-width: adapt(1440);
-    background: #E5E5E5;
+    background: #fff;
 }
 
 .navigation{
@@ -164,7 +166,79 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 img{
     width: 100%;
+}
 
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin: adapt(82) adapt(110) adapt(71) adapt(110);
+
+    &_item {
+        width: adapt(570);
+        height: adapt(374);
+        background: #F2F2F2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &_header {
+        font-weight: 400;
+        font-size: adapt(36);
+        line-height: adapt(36);
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    &_text {
+        margin-left: adapt(52);
+        margin-right: adapt(52);
+        // padding-top: adapt(39);
+        font-family: 'Arial';
+        font-weight: 400;
+        font-size: adapt(16);
+        line-height: adapt(24);
+    }
+
+    &_link {
+        margin-top: adapt(23);
+        margin-left: adapt(52);
+        margin-bottom: adapt(55);
+        width: adapt(162);
+        font-weight: 400;
+        font-size: adapt(20);
+        line-height: adapt(30);     
+        text-align: left;
+        text-transform: uppercase;
+        color: #000000;
+        position: relative;
+
+        &::after{
+            content: '';
+            background: url(/img/icon.png) no-repeat;
+            background-size: cover;
+            width: adapt(24);
+            height: adapt(12);
+            display: inline-block;
+            position: absolute;
+            top: adapt(11);
+            left: adapt(126);
+        }
+    }
+
+    &_img{
+        margin: adapt(44) adapt(62) adapt(39) adapt(52);
+    }
+
+    .img_slim{
+        width: adapt(100);
+        height: adapt(106);
+    }
+
+    .img_pro{
+        width: adapt(134);
+        height: adapt(100);
+    }
 }
 
 
