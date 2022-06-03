@@ -242,3 +242,179 @@ img{
 }
 
 
+
+
+
+.instructions {
+
+    &_header {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(60);
+        line-height: adapt(60);
+        text-align: left; 
+        margin: adapt(71) 0 adapt(72) adapt(110);
+    }
+
+    &_wrapper {
+        margin: 0 adapt(110);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_item {
+        width: adapt(230);
+        height: adapt(280);
+        position: relative;
+        z-index: 2;
+    }
+
+    &_image {
+        width: adapt(80);
+        height: adapt(80);
+        margin-bottom: adapt(31);
+        // z-index: 1;
+    }
+
+    &_text {
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(18);
+        padding-right: adapt(10);
+        line-height: adapt(24);
+        color: #444444;
+        z-index: 3;
+    }
+
+    &_number {
+        color: #F2F2F2;
+        font-size: adapt(280);
+        line-height: adapt(280);
+        position: absolute;
+        right: 0;
+        bottom: adapt(30);
+        margin-bottom: adapt(11);
+        z-index: -1;
+    }
+}
+
+
+
+.example {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 adapt(70) 0 adapt(110);
+    height: adapt(656);
+    position: relative;
+
+
+    &_text {
+        z-index: 1;
+
+
+        &_header {
+            font-family: 'Oswald';
+            font-weight: 400;
+            font-size: adapt(60);
+            line-height: adapt(60);
+            margin-bottom: adapt(146);
+            margin-top: adapt(58);
+        }
+
+        &_explanation {
+            font-family: 'Arial';
+            font-weight: 400;
+            font-size: adapt(16);
+            line-height: adapt(24);
+            color: #444444;
+    
+            &_story{
+                margin-bottom: adapt(69);
+                width: adapt(436);
+            }
+    
+            &_table{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: adapt(366);
+                position: relative;
+                z-index: 1;
+
+    
+                &_cell1, &_cell2{
+                    font-family: 'Oswald';
+                    font-weight: 400;
+                    font-size: adapt(30);
+                    line-height: adapt(57);
+                    text-align: center;
+                    color: #000000;
+                    border: 1px solid #CDCDCD;
+                    width: adapt(162);
+                    height: adapt(77);
+                    width: adapt(162);
+                }
+a
+                &_cell3, &_cell4{
+                    font-family: 'Arial';
+                    font-weight: 400;
+                    font-size: adapt(16);
+                    line-height: adapt(16);
+                    text-align: center;
+                    color: #444444;
+                    background-color: #FFFFFF;
+                    padding: 0 adapt(3);
+                }
+
+                &_cell3{
+                    position: absolute;
+                    top: adapt(64);
+                    left: adapt(40);
+                    background-color: #EAEAEA;
+                }
+
+                &_cell4{
+                    position: absolute;
+                    top: adapt(67);
+                    left: adapt(246);
+                    background-color: #EAEAEA;
+
+                }
+
+                &_cell5, &_cell6{
+                    margin-top: adapt(55);
+                    font-family: 'Oswald';
+                    font-weight: 400;
+                    font-size: adapt(25);
+                    line-height: adapt(25);
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #000000;
+                    width: adapt(162);
+                }
+            }
+        }
+    }
+
+
+    &_picture {
+        width: adapt(690);
+        height: adapt(656);
+        border: 1px red solid;
+        z-index: 1;
+
+    }
+
+    &_background{
+        background: #EAEAEA;
+        width: adapt(1440);
+        height: adapt(462);
+        position: absolute;
+        bottom: 0;
+        right: adapt(-70);
+        z-index: 0;
+
+    }
+}

@@ -239,4 +239,148 @@ img {
 .cards .img_pro {
   width: 9.3055555556vw;
   height: 6.9444444444vw;
+}
+
+.instructions_header {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.1666666667vw;
+  line-height: 4.1666666667vw;
+  text-align: left;
+  margin: 4.9305555556vw 0 5vw 7.6388888889vw;
+}
+.instructions_wrapper {
+  margin: 0 7.6388888889vw;
+  display: flex;
+  justify-content: space-between;
+}
+.instructions_item {
+  width: 15.9722222222vw;
+  height: 19.4444444444vw;
+  position: relative;
+  z-index: 2;
+}
+.instructions_image {
+  width: 5.5555555556vw;
+  height: 5.5555555556vw;
+  margin-bottom: 2.1527777778vw;
+}
+.instructions_text {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25vw;
+  padding-right: 0.6944444444vw;
+  line-height: 1.6666666667vw;
+  color: #444444;
+  z-index: 3;
+}
+.instructions_number {
+  color: #F2F2F2;
+  font-size: 19.4444444444vw;
+  line-height: 19.4444444444vw;
+  position: absolute;
+  right: 0;
+  bottom: 2.0833333333vw;
+  margin-bottom: 0.7638888889vw;
+  z-index: -1;
+}
+
+.example {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4.8611111111vw 0 7.6388888889vw;
+  height: 45.5555555556vw;
+  position: relative;
+}
+.example_text {
+  z-index: 1;
+}
+.example_text_header {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 4.1666666667vw;
+  line-height: 4.1666666667vw;
+  margin-bottom: 10.1388888889vw;
+  margin-top: 4.0277777778vw;
+}
+.example_text_explanation {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 1.1111111111vw;
+  line-height: 1.6666666667vw;
+  color: #444444;
+}
+.example_text_explanation_story {
+  margin-bottom: 4.7916666667vw;
+  width: 30.2777777778vw;
+}
+.example_text_explanation_table {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 25.4166666667vw;
+  position: relative;
+  z-index: 1;
+}
+.example_text_explanation_table_cell1, .example_text_explanation_table_cell2 {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 2.0833333333vw;
+  line-height: 3.9583333333vw;
+  text-align: center;
+  color: #000000;
+  border: 1px solid #CDCDCD;
+  width: 11.25vw;
+  height: 5.3472222222vw;
+  width: 11.25vw;
+}
+a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 1.1111111111vw;
+  line-height: 1.1111111111vw;
+  text-align: center;
+  color: #444444;
+  background-color: #FFFFFF;
+  padding: 0 0.2083333333vw;
+}
+.example_text_explanation_table_cell3 {
+  position: absolute;
+  top: 4.4444444444vw;
+  left: 2.7777777778vw;
+  background-color: #EAEAEA;
+}
+.example_text_explanation_table_cell4 {
+  position: absolute;
+  top: 4.6527777778vw;
+  left: 17.0833333333vw;
+  background-color: #EAEAEA;
+}
+.example_text_explanation_table_cell5, .example_text_explanation_table_cell6 {
+  margin-top: 3.8194444444vw;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 1.7361111111vw;
+  line-height: 1.7361111111vw;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  width: 11.25vw;
+}
+.example_picture {
+  width: 47.9166666667vw;
+  height: 45.5555555556vw;
+  border: 1px red solid;
+  z-index: 1;
+}
+.example_background {
+  background: #EAEAEA;
+  width: 100vw;
+  height: 32.0833333333vw;
+  position: absolute;
+  bottom: 0;
+  right: -4.8611111111vw;
+  z-index: 0;
 }/*# sourceMappingURL=style.css.map */
