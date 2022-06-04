@@ -175,6 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 .cards {
@@ -383,4 +384,74 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   bottom: 0;
   right: -4.8611111111vw;
   z-index: 0;
+}
+
+.location {
+  width: 100%;
+  height: 27.2916666667vw;
+  position: relative;
+}
+.location_pin {
+  position: absolute;
+  top: 10.4166666667vw;
+  left: 48.6111111111vw;
+  width: 7.8472222222vw;
+  height: 7.3611111111vw;
+}
+.location_message {
+  position: absolute;
+  width: 32.6388888889vw;
+  height: 13.8888888889vw;
+  top: 6.9444444444vw;
+  left: 6.9444444444vw;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 2.0833333333vw;
+  line-height: 13.8888888889vw;
+  text-transform: uppercase;
+  background: #FFFFFF;
+  color: #111111;
+  padding-left: 3.125vw;
+  opacity: 0.8;
+}
+
+.footer {
+  width: 100%;
+  height: 10.3472222222vw;
+  background: #F2F2F2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_logo {
+  width: 8.8888888889vw;
+  height: 1.6666666667vw;
+  margin-left: 7.6388888889vw;
+}
+.footer_sm {
+  width: 8.9583333333vw;
+  height: 2.2916666667vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_sm_f {
+  width: 1.9444444444vw;
+  height: 2.2916666667vw;
+}
+.footer_sm_i {
+  width: 1.5972222222vw;
+  height: 1.5972222222vw;
+}
+.footer_sm_v {
+  width: 2.0833333333vw;
+  height: 1.5277777778vw;
+}
+.footer_signature {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 1.1111111111vw;
+  line-height: 1.25vw;
+  color: #444444;
+  margin-right: 7.6388888889vw;
 }/*# sourceMappingURL=style.css.map */
