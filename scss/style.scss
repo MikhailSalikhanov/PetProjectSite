@@ -272,7 +272,6 @@ img{
         width: adapt(80);
         height: adapt(80);
         margin-bottom: adapt(31);
-        // z-index: 1;
     }
 
     &_text {
@@ -298,8 +297,6 @@ img{
     }
 }
 
-
-
 .example {
     display: flex;
     justify-content: space-between;
@@ -309,7 +306,8 @@ img{
 
 
     &_text {
-        z-index: 1;
+        z-index: 3;
+
 
 
         &_header {
@@ -327,7 +325,7 @@ img{
             font-size: adapt(16);
             line-height: adapt(24);
             color: #444444;
-    
+
             &_story{
                 margin-bottom: adapt(69);
                 width: adapt(436);
@@ -339,7 +337,8 @@ img{
                 flex-wrap: wrap;
                 width: adapt(366);
                 position: relative;
-                z-index: 1;
+                z-index: 2;
+
 
     
                 &_cell1, &_cell2{
@@ -398,12 +397,93 @@ a
 
 
     &_picture {
-        width: adapt(690);
-        height: adapt(656);
         border: 1px red solid;
-        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        // justify-content: flex-end;
+        position: relative;
 
+        &_cat{
+            width: adapt(610);
+            height: adapt(536);
+            display: flex;
+        }
+
+        &_cat1, &_cat2{
+            z-index: 2;
+            display: inline-block;
+        }
+
+        &_cat1 {
+            width: adapt(305);
+            height: adapt(536);
+            display: inline-block
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+        }
+
+        &_cat2{
+            width: adapt(305);
+            height: adapt(536);
+            display: inline-block
+            // position: absolute;
+            // top: 0;
+            // right: 0;
+        }
+
+
+
+        &_scrool{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_line{
+                background: #DCDCDC;
+                width: adapt(428);
+                height: adapt(16);
+                position: relative;
+                z-index: 2;
+
+
+                // &::before{
+                //     position: absolute;
+                //     content: '';
+                //     width: adapt(34);
+                //     height: adapt(34);
+                //     border-radius: 50%;
+                //     background-color: #FFFFFF;
+                //     border: 1px solid #DCDCDC;
+                //     top: adapt(-8);
+                //     left: adapt(190);
+                // }
+                // &::after{
+                //     position: absolute;
+                //     content: '';
+                //     width: adapt(12);
+                //     height: adapt(12);
+                //     border-radius: 50%;
+                //     background: #68B738;
+                //     // border: 1px solid #DCDCDC;
+                //     top: adapt(3);
+                //     left: adapt(201);
+                // }
+            }
+
+            &_text{
+                font-family: 'Oswald';
+                font-weight: 400;
+                font-size: adapt(20);
+                line-height: adapt(30);
+                text-transform: uppercase;
+                margin: 0 adapt(10);
+                z-index: 2;
+            }
+
+        }
     }
+
 
     &_background{
         background: #EAEAEA;
@@ -412,8 +492,19 @@ a
         position: absolute;
         bottom: 0;
         right: adapt(-70);
-        z-index: 0;
+        z-index: 1;
+    }
 
+    &_slideControl{
+        position: absolute;
+        bottom: adapt(88);
+        right: adapt(290);
+        z-index: 2;
+
+        &_pointer{
+            width: adapt(34);
+            height: adapt(34);
+        }
     }
 }
 
@@ -494,4 +585,10 @@ a
         color: #444444;
         margin-right: adapt(110);
     }
+}
+
+.hidden_cat{
+    // width: 0px;
+    // height: 0px;
+    // opacity: 0;
 }
