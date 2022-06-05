@@ -9,6 +9,8 @@ scroolBefore.onclick = function () {
     scroolBefore.classList.add('scrool_active');
     scroolAfter.classList.remove('scrool_active');
     cat1.classList.remove('hidden_cat');
+    cat1.classList.add('unhidden_cat');
+    cat2.classList.remove('unhidden_cat');
     cat2.classList.add('hidden_cat');
 };
 
@@ -16,6 +18,8 @@ scroolAfter.onclick = function () {
     scroolAfter.classList.add('scrool_active');
     scroolBefore.classList.remove('scrool_active');
     cat1.classList.add('hidden_cat');
+    cat1.classList.remove('unhidden_cat');
     cat2.classList.remove('hidden_cat');
+    cat2.classList.add('unhidden_cat');
 };
 

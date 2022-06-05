@@ -155,7 +155,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
 
     &_button:hover{
-        background: #5EAA2F;
+        background: #4b8825;
     }
 
 }
@@ -179,8 +179,22 @@ img{
     display: flex;
     justify-content: space-between;
     margin: adapt(82) adapt(110) adapt(71) adapt(110);
+    perspective: adapt(1000);
 
-    &_item {
+     &_wrapper{
+        position: relative;
+        transform-style: preserve-3d;
+        transition-duration: 1s;
+        
+        &:hover{
+            transform: rotateY(180deg);
+            .cards_item_front{
+                z-index: -1;
+            }
+        }
+    }
+
+    &_item_front {
         width: adapt(570);
         height: adapt(374);
         background: #F2F2F2;
@@ -188,12 +202,20 @@ img{
         flex-wrap: wrap;
         align-items: center;
         position: relative;
+        backface-visibility: hidden;
     }
 
-    &_item:hover {
-        opacity: 0.7;
+    &_item_back{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+
     }
-    
+
     &_header {
         font-weight: 400;
         font-size: adapt(36);
@@ -252,7 +274,6 @@ img{
     }
 }
 
-
 .instructions {
 
     &_header {
@@ -310,15 +331,13 @@ img{
 .example {
     display: flex;
     justify-content: space-between;
-    margin: 0 adapt(70) 0 adapt(110);
+    margin: 0 adapt(110) 0 adapt(110);
     height: adapt(656);
     position: relative;
 
 
     &_text {
         z-index: 3;
-
-
 
         &_header {
             font-family: 'Oswald';
@@ -338,7 +357,8 @@ img{
 
             &_story{
                 margin-bottom: adapt(69);
-                width: adapt(436);
+                padding-right: adapt(130);
+                // width: adapt(436);
             }
     
             &_table{
@@ -410,23 +430,35 @@ a
         flex-direction: column;
         position: relative;
         justify-content: space-between;
-
+        
         &_cat{
             width: adapt(610);
             height: adapt(536);
             z-index: 2;
             display: flex;
+            position: relative;
         }
 
         &_cat1, &_cat2{
-            z-index: 2;
             width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
         }
 
 .hidden_cat{
-        width: 0px;
-        transition-duration: 0.3s;
-        }
+    // width: 0px;
+    // visibility: hidden;
+    // transform: scale(0, 0);
+    opacity: 0;
+    transition-duration: 4s;
+}
+
+.unhidden_cat{
+    opacity: 1;
+    // transform: scale(1, 1);
+    transition-duration: 4s;
+}
 
         &_scrool{
             display: flex;
@@ -455,7 +487,7 @@ a
 
 .scrool_active{
         background: #68B738;
-        transition-duration: 0.6s;
+        transition-duration: 2s;
 
 }
 
@@ -478,7 +510,7 @@ a
         height: adapt(462);
         position: absolute;
         bottom: 0;
-        right: adapt(-70);
+        right: adapt(-110);
         z-index: 1;
     }
 }
@@ -559,6 +591,10 @@ a
         line-height: adapt(18);
         color: #444444;
         margin-right: adapt(110);
+        width: 20%;
+    }
+    a{
+        text-decoration: underline;
     }
 }
 
