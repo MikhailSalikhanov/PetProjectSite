@@ -99,6 +99,9 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
 }
+.navigation_menu a:hover {
+  opacity: 0.6;
+}
 
 .header {
   justify-content: space-between;
@@ -164,6 +167,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.3888888889vw;
   color: #FFFFFF;
 }
+.head_button:hover {
+  background: #5EAA2F;
+}
 
 .main_img {
   position: absolute;
@@ -190,6 +196,10 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  position: relative;
+}
+.cards_item:hover {
+  opacity: 0.7;
 }
 .cards_header {
   font-weight: 400;
@@ -221,7 +231,7 @@ img {
 }
 .cards_link::after {
   content: "";
-  background: url(/img/icon.png) no-repeat;
+  background: url(../img/icon.png) no-repeat;
   background-size: cover;
   width: 1.6666666667vw;
   height: 0.8333333333vw;
@@ -371,41 +381,51 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   width: 11.25vw;
 }
 .example_picture {
-  border: 1px red solid;
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: space-between;
 }
 .example_picture_cat {
   width: 42.3611111111vw;
   height: 37.2222222222vw;
+  z-index: 2;
   display: flex;
 }
 .example_picture_cat1, .example_picture_cat2 {
   z-index: 2;
-  display: inline-block;
+  width: 100%;
 }
-.example_picture_cat1 {
-  width: 21.1805555556vw;
-  height: 37.2222222222vw;
-  display: inline-block;
-}
-.example_picture_cat2 {
-  width: 21.1805555556vw;
-  height: 37.2222222222vw;
-  display: inline-block;
+.example_picture .hidden_cat {
+  width: 0px;
+  transition-duration: 0.3s;
 }
 .example_picture_scrool {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3.8194444444vw;
 }
 .example_picture_scrool_line {
-  background: #DCDCDC;
+  background: #ffffff;
   width: 29.7222222222vw;
-  height: 1.1111111111vw;
+  height: 1.7361111111vw;
+  border-radius: 10px;
   position: relative;
+  border-color: #CDCDCD;
   z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.example_picture_scrool_line_before, .example_picture_scrool_line_after {
+  border-radius: 6px;
+  width: 13.8888888889vw;
+  height: 0.9722222222vw;
+}
+.example_picture_scrool .scrool_active {
+  background: #68B738;
+  transition-duration: 0.6s;
 }
 .example_picture_scrool_text {
   font-family: "Oswald";
@@ -424,16 +444,6 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   bottom: 0;
   right: -4.8611111111vw;
   z-index: 1;
-}
-.example_slideControl {
-  position: absolute;
-  bottom: 6.1111111111vw;
-  right: 20.1388888889vw;
-  z-index: 2;
-}
-.example_slideControl_pointer {
-  width: 2.3611111111vw;
-  height: 2.3611111111vw;
 }
 
 .location {

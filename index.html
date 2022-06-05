@@ -14,9 +14,9 @@
 		<div class="wrapper">
 			<nav class="navigation">
 				<ul class="navigation_menu">
-					<li>Main page</li>
-					<li>Catalog</li>
-					<li>Choose a program</li>
+					<li><a href="#cards">Choose a program</a></li>
+					<li><a href="#instructions">How it works?</a></li>
+					<li><a href="#example">Example</a></li>
 				</ul>
 			</nav>
 			<header>
@@ -25,7 +25,7 @@
 						<div class="header_logo"><img src="./img/Header_logo.png" alt="Logo"></div>
 						<h1 class="head_title">Functional food <br> for cats</h1>
 						<p class="head_subtitle">Did you take care of yourself? Take care of the cat!</p>
-						<button class="head_button">Choose a program</button>
+						<form action="#cards"><button class="head_button">Choose a program</button></form>
 						<div class="main_img"><img src="./img/Header_main_can.png" alt="Can"></div>
 					</div>
 					<div class="header_right">
@@ -34,8 +34,8 @@
 				</div>
 			</header>
 			<main>
-				<div class="cards">
-					<div class="cards_item">
+				<div class="cards"><a name="cards"></a>
+					<a class="cards_item" title="Sorry, but it is one-page site :)" href="#cards">
 						<img src="./img/cat_back_slim.png" alt="Cat" class="cards_img img_slim">
 						<div class="cards_header">weight loss</div>
 						<div class="cards_text">
@@ -43,16 +43,16 @@
 							climb trees? It's time for a diet! Cat Energy Slim will help
 							your pet to lose weight.</div>
 						<button class="cards_link">Catalog SLIM</button>
-					</div>
-					<div class="cards_item">
+					</a>
+					<a class="cards_item" title="Sorry, but it is one-page site :)" href="#cards">
 						<img src="./img/cat_back_pro.png" alt="Cat" class="cards_img img_pro">
 						<div class="cards_header">weight gain</div>
 						<div class="cards_text">Earn authority among street cats and even dogs?
 							The Cat Energy Pro series will help your cat build necessary muscles!</div>
 						<button class="cards_link">Catalog PRO</button>
-					</div>
+					</a>
 				</div>
-				<div class="instructions">
+				<div class="instructions"><a name="instructions"></a>
 					<h2 class="instructions_header">How it works</h2>
 					<div class="instructions_wrapper">
 						<div class="instructions_item">
@@ -83,7 +83,7 @@
 
 
 				</div>
-				<div class="example">
+				<div class="example"><a name="example"></a>
 					<div class="example_text">
 						<div class="example_text_header">Living example</div>
 						
@@ -100,24 +100,25 @@
 								<div class="example_text_explanation_table_cell3">weight loss</div>
 								<div class="example_text_explanation_table_cell4">time spent</div>
 								<div class="example_text_explanation_table_cell5">Food costs:</div>
-								<div class="example_text_explanation_table_cell6">150$</div>
+								<div class="example_text_explanation_table_cell6">500$</div>
 							</div>
 						</div>
 					</div>
 					<div class="example_picture">
 						<div class="example_picture_cat">
-							<div class="example_picture_cat1  hidden_cat"><img src="./img/Before_after1.png" alt="Before_after"></div>
-							<div class="example_picture_cat2"><img src="./img/Before_after2.png" alt="Before_after"></div>
+							<div class="example_picture_cat1"><img src="./img/before.webp" alt="Before"></div>
+							<div class="example_picture_cat2 hidden_cat"><img src="./img/after.webp" alt="After"></div>
 						</div>
 						<div class="example_picture_scrool">
 							<div class="example_picture_scrool_text">Before</div>
-							<div class="example_picture_scrool_line"></div>
+							<div class="example_picture_scrool_line">
+								<div class="example_picture_scrool_line_before scrool_active"></div>
+								<div class="example_picture_scrool_line_after"></div>
+							</div>
 							<div class="example_picture_scrool_text">After</div>
 						</div>
 					</div>
 					<div class="example_background"></div>
-					<div class="example_slideControl"><img src="./img/slider_control.png" alt="" class="example_slideControl_pointer"></div>
-
 				</div>
 			</main>
 			<div class="location">
@@ -146,3 +147,7 @@
 		<script src="./js/script.js"></script>
 	</body>
 </html>
+
+
+
+
