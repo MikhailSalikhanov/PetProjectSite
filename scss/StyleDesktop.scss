@@ -1,0 +1,555 @@
+@use "sass:math";
+
+@function adapt($px) {
+    $result1: math.div($px, 1440) * 100;
+    $result2: $result1 + vw;
+    @return $result2;
+};
+
+.wrapper{
+    position: relative;
+    max-width: adapt(1440);
+    background: #fff;
+}
+
+.navigation{
+    position: absolute;
+    left: adapt(852);
+    top: adapt(69);
+    
+
+    &_menu{
+        width: adapt(478);
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(20);
+        line-height: adapt(30);
+        text-transform: uppercase;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+
+        & a:hover{
+            opacity: 0.6;
+        }
+    }
+}
+
+
+.header {
+    justify-content: space-between;
+    display: flex;
+    height: adapt(696);
+
+    &_left {
+        height: 100%;
+    }
+
+    &_right {
+        height: 100%;
+
+        &_image{
+            height: 100%;
+        }
+    }
+
+    &_logo {
+        position: absolute;
+        left: adapt(110);
+        top: adapt(53);
+        height: adapt(59);
+        width: adapt(202);
+        }
+    }
+
+.head {
+
+    &_title {
+        width: adapt(400);
+        height: adapt(120);
+        position: absolute;
+        left: adapt(190);
+        top: adapt(223);
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(60);
+        color: #000000;
+    }
+
+    &_subtitle {
+        width: adapt(280);
+        line-height: 140%;
+        position: absolute;
+        left: adapt(190);
+        top: adapt(378);
+        min-height: adapt(60);
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(20);
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    &_button {
+        padding: adapt(14) adapt(26);
+        gap: adapt(4);
+        position: absolute;
+        width: adapt(264);
+        height: adapt(54);
+        left: adapt(190);
+        top: adapt(475);
+        text-transform: uppercase;
+        background: #68B738;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(20);
+        color: #FFFFFF;
+    }
+
+    &_button:hover{
+        background: #4b8825;
+    }
+
+}
+.main {
+
+    &_img {
+        position: absolute;
+        width: adapt(552);
+        height: adapt(499);
+        left: adapt(558);
+        top: adapt(141);
+    }
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin: adapt(82) adapt(110) adapt(71) adapt(110);
+    perspective: adapt(1000);
+
+     &_wrapper{
+        position: relative;
+        transform-style: preserve-3d;
+        transition-duration: 1s;
+        
+        &:hover{
+            transform: rotateY(180deg);
+            .cards_item_front{
+                z-index: -1;
+            }
+        }
+    }
+
+    &_item_front {
+        width: adapt(570);
+        height: adapt(374);
+        background: #F2F2F2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        backface-visibility: hidden;
+    }
+
+    &_item_back{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+
+    }
+
+    &_header {
+        font-weight: 400;
+        font-size: adapt(36);
+        line-height: adapt(36);
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    &_text {
+        margin-left: adapt(52);
+        margin-right: adapt(52);
+        font-family: 'Arial';
+        font-weight: 400;
+        font-size: adapt(16);
+        line-height: adapt(24);
+    }
+
+    &_link {
+        margin-top: adapt(23);
+        margin-left: adapt(52);
+        margin-bottom: adapt(55);
+        width: adapt(162);
+        font-weight: 400;
+        font-size: adapt(20);
+        line-height: adapt(30);     
+        text-align: left;
+        text-transform: uppercase;
+        color: #000000;
+        position: relative;
+
+        &::after{
+            content: '';
+            background: url(../img/icon.png) no-repeat;
+            background-size: cover;
+            width: adapt(24);
+            height: adapt(12);
+            display: inline-block;
+            position: absolute;
+            top: adapt(11);
+            left: adapt(126);
+        }
+    }
+
+    &_img{
+        margin: adapt(44) adapt(62) adapt(39) adapt(52);
+    }
+
+    .img_slim{
+        width: adapt(100);
+        height: adapt(106);
+    }
+
+    .img_pro{
+        width: adapt(134);
+        height: adapt(100);
+    }
+}
+
+.instructions {
+
+    &_header {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(60);
+        line-height: adapt(60);
+        text-align: left; 
+        margin: adapt(71) 0 adapt(72) adapt(110);
+    }
+
+    &_wrapper {
+        margin: 0 adapt(110);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_item {
+        width: adapt(230);
+        height: adapt(280);
+        position: relative;
+        z-index: 2;
+    }
+
+    &_image {
+        width: adapt(80);
+        height: adapt(80);
+        margin-bottom: adapt(31);
+    }
+
+    &_text {
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: adapt(18);
+        padding-right: adapt(10);
+        line-height: adapt(24);
+        color: #444444;
+        z-index: 3;
+    }
+
+    &_number {
+        color: #F2F2F2;
+        font-size: adapt(280);
+        line-height: adapt(280);
+        position: absolute;
+        right: 0;
+        bottom: adapt(30);
+        margin-bottom: adapt(11);
+        z-index: -1;
+    }
+}
+
+.example {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 adapt(110) 0 adapt(110);
+    height: adapt(656);
+    position: relative;
+
+
+    &_text {
+        z-index: 3;
+
+        &_header {
+            font-family: 'Oswald';
+            font-weight: 400;
+            font-size: adapt(60);
+            line-height: adapt(60);
+            margin-bottom: adapt(146);
+            margin-top: adapt(58);
+        }
+
+        &_explanation {
+            font-family: 'Arial';
+            font-weight: 400;
+            font-size: adapt(16);
+            line-height: adapt(24);
+            color: #444444;
+
+            &_story{
+                margin-bottom: adapt(69);
+                padding-right: adapt(130);
+                // width: adapt(436);
+            }
+    
+            &_table{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: adapt(366);
+                position: relative;
+                z-index: 2;
+
+
+    
+                &_cell1, &_cell2{
+                    font-family: 'Oswald';
+                    font-weight: 400;
+                    font-size: adapt(30);
+                    line-height: adapt(57);
+                    text-align: center;
+                    color: #000000;
+                    border: 1px solid #CDCDCD;
+                    width: adapt(162);
+                    height: adapt(77);
+                    width: adapt(162);
+                }
+a
+                &_cell3, &_cell4{
+                    font-family: 'Arial';
+                    font-weight: 400;
+                    font-size: adapt(16);
+                    line-height: adapt(16);
+                    text-align: center;
+                    color: #444444;
+                    background-color: #FFFFFF;
+                    padding: 0 adapt(3);
+                }
+
+                &_cell3{
+                    position: absolute;
+                    top: adapt(64);
+                    left: adapt(40);
+                    background-color: #EAEAEA;
+                }
+
+                &_cell4{
+                    position: absolute;
+                    top: adapt(67);
+                    left: adapt(246);
+                    background-color: #EAEAEA;
+
+                }
+
+                &_cell5, &_cell6{
+                    margin-top: adapt(55);
+                    font-family: 'Oswald';
+                    font-weight: 400;
+                    font-size: adapt(25);
+                    line-height: adapt(25);
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #000000;
+                    width: adapt(162);
+                }
+            }
+        }
+    }
+
+    &_picture {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        
+        &_cat{
+            width: adapt(610);
+            height: adapt(536);
+            z-index: 2;
+            display: flex;
+            position: relative;
+        }
+
+        &_cat1, &_cat2{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+.hidden_cat{
+    // width: 0px;
+    // visibility: hidden;
+    // transform: scale(0, 0);
+    opacity: 0;
+    transition-duration: 4s;
+}
+
+.unhidden_cat{
+    opacity: 1;
+    // transform: scale(1, 1);
+    transition-duration: 4s;
+}
+
+        &_scrool{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: adapt(55);
+
+            &_line{
+                background: #ffffff;
+                width: adapt(428);
+                height: adapt(25);
+                border-radius: 10px;
+                position: relative;
+                border-color: #CDCDCD;
+                z-index: 2;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                
+                &_before, &_after{
+                    border-radius: 6px;
+                    width: adapt(200);
+                    height: adapt(14);
+                }
+            }
+
+.scrool_active{
+        background: #68B738;
+        transition-duration: 2s;
+
+}
+
+            &_text{
+                font-family: 'Oswald';
+                font-weight: 400;
+                font-size: adapt(20);
+                line-height: adapt(30);
+                text-transform: uppercase;
+                margin: 0 adapt(10);
+                z-index: 2;
+            }
+
+        }
+    }
+
+    &_background{
+        background: #EAEAEA;
+        width: adapt(1440);
+        height: adapt(462);
+        position: absolute;
+        bottom: 0;
+        right: adapt(-110);
+        z-index: 1;
+    }
+}
+
+.location{
+    width: 100%;
+    height: adapt(393);
+    position: relative;
+    
+    &_pin{
+        position: absolute;
+        top: adapt(150);
+        left: adapt(700);
+        width: adapt(113);
+        height: adapt(106);
+    }
+
+    &_message{
+        position: absolute;
+        width: adapt(470);
+        height: adapt(200);
+        top: adapt(100);
+        left: adapt(100);
+        font-family: 'Oswald';
+        font-weight: 400;
+        font-size: adapt(30);
+        line-height: adapt(200);
+        text-transform: uppercase;
+        background: #FFFFFF;
+        color: #111111;
+        padding-left: adapt(45);
+        opacity: 0.8;
+        }
+}
+
+.footer {
+    width: 100%;
+    height: adapt(149);
+    background: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_logo {
+        width: adapt(128);
+        height: adapt(24);
+        margin-left: adapt(110);
+    }
+
+    &_sm {
+        width: adapt(129);
+        height: adapt(33);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_f {
+            width: adapt(28);
+            height: adapt(33);
+        }
+    
+        &_i {
+            width: adapt(23);
+            height: adapt(23);
+        }
+        
+        &_v {
+            width: adapt(30);
+            height: adapt(22);
+        }
+
+    }
+
+    &_signature {
+        font-family: 'Arial';
+        font-weight: 400;
+        font-size: adapt(16);
+        line-height: adapt(18);
+        color: #444444;
+        margin-right: adapt(110);
+        width: 20%;
+    }
+    a{
+        text-decoration: underline;
+    }
+}
