@@ -146,13 +146,13 @@
         position: absolute;
         width: adapt(509);
         height: adapt(409);
-        left: adapt(20);
+        left: adapt(40);
         top: adapt(200);
         z-index: -1;
 
         img{
             width: 100%;
-            height: 100%;
+            // height: 100%;
         }
     }
 }
@@ -161,7 +161,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: adapt(326) adapt(49) adapt(0) adapt(30);
+    margin: adapt(356) adapt(49) adapt(0) adapt(30);
     perspective: adapt(1000);
     height: adapt(774);
 
@@ -169,6 +169,13 @@
         position: relative;
         transform-style: preserve-3d;
         transition-duration: 1s;
+
+        &:hover{
+            .cards_item_front, .cards_link {
+                z-index: -1;
+                background-color: #F2F2F2;
+            }
+    }
         
         &_clicked {
             transform: rotateY(180deg);
@@ -415,7 +422,7 @@
 
                 &_cell3{
                     position: absolute;
-                    top: adapt(64);
+                    top: adapt(68);
                     left: adapt(41);
                     background-color: #ffffff;
                 }
