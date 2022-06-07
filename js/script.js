@@ -22,4 +22,4 @@ scroolAfter.onclick = function () {
     cat2.classList.remove('hidden_cat');
     cat2.classList.add('unhidden_cat');
 };
-
+       

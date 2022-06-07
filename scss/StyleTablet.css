@@ -13,7 +13,7 @@
   justify-content: flex-end;
 }
 .navigation_menu {
-  width: 46.09375vw;
+  width: 48.6979166667vw;
   font-size: 2.34375vw;
   line-height: 3.125vw;
   color: #000000;
@@ -59,7 +59,7 @@
 
 .head_title {
   position: static;
-  width: 52.0833333333vw;
+  width: 42.96875vw;
   height: 15.625vw;
   font-size: 7.8125vw;
   line-height: 7.8125vw;
@@ -87,23 +87,23 @@
 
 .main_img {
   position: absolute;
-  width: 92.3177083333vw;
-  height: 79.296875vw;
-  left: -6.5104166667vw;
+  width: 66.2760416667vw;
+  height: 53.2552083333vw;
+  left: 2.6041666667vw;
   top: 26.0416666667vw;
   z-index: -1;
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 68.4895833333vw 6.3802083333vw 0vw 3.90625vw;
+  margin: 55.46875vw 6.3802083333vw 0vw 3.90625vw;
   perspective: 130.2083333333vw;
   height: 100.78125vw;
 }
@@ -131,13 +131,16 @@ img {
 }
 .cards_item_back {
   position: absolute;
-  left: 0;
+  left: -6.5104166667vw;
   top: 0;
   width: 100%;
   height: 100%;
   transform: rotateY(180deg);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+.cards_item_back img {
+  float: center;
 }
 .cards_header {
   font-weight: 400;
@@ -197,17 +200,17 @@ img {
   font-size: 7.8125vw;
   line-height: 7.8125vw;
   text-align: left;
-  margin: 9.2447916667vw 0 9.375vw 14.3229166667vw;
+  margin: 7.1614583333vw 0 9.375vw 3.90625vw;
 }
 .instructions_wrapper {
-  margin: 0 14.3229166667vw;
+  margin: 0 6.5104166667vw 0 3.90625vw;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .instructions_item {
-  width: 29.9479166667vw;
-  height: 36.4583333333vw;
+  width: 35.15625vw;
+  height: 39.0625vw;
   position: relative;
   z-index: 2;
 }
@@ -240,7 +243,7 @@ img {
 .example {
   display: flex;
   justify-content: space-between;
-  margin: 0 14.3229166667vw 0 14.3229166667vw;
+  margin: 0 6.5104166667vw 0 3.90625vw;
   height: 85.4166666667vw;
   position: relative;
   flex-wrap: wrap;
@@ -254,7 +257,7 @@ img {
   font-size: 7.8125vw;
   line-height: 7.8125vw;
   margin-bottom: 8.203125vw;
-  margin-top: 7.5520833333vw;
+  margin-top: 4.9479166667vw;
 }
 .example_text_explanation {
   font-family: "Arial";
@@ -264,16 +267,38 @@ img {
   color: #444444;
 }
 .example_text_explanation_story {
-  margin-bottom: 8.984375vw;
+  margin-bottom: 7.03125vw;
   padding-right: 0vw;
 }
 .example_text_explanation_table {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 47.65625vw;
+  width: 89.3229166667vw;
   position: relative;
   z-index: 2;
+}
+.example_text_explanation_table_cell1 {
+  order: 1;
+}
+.example_text_explanation_table_cell2 {
+  order: 2;
+}
+.example_text_explanation_table_cell3 {
+  order: 5;
+}
+.example_text_explanation_table_cell4 {
+  order: 6;
+}
+.example_text_explanation_table_cell5 {
+  order: 3;
+  text-align: right;
+  width: 34.1145833333vw;
+}
+.example_text_explanation_table_cell6 {
+  order: 4;
+  text-align: left;
+  width: 8.0729166667vw;
 }
 .example_text_explanation_table_cell1, .example_text_explanation_table_cell2 {
   font-family: "Oswald";
@@ -287,7 +312,7 @@ img {
   height: 10.0260416667vw;
   width: 21.09375vw;
 }
-a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
+.example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   font-family: "Arial";
   font-weight: 400;
   font-size: 2.0833333333vw;
@@ -300,31 +325,30 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
 .example_text_explanation_table_cell3 {
   position: absolute;
   top: 8.3333333333vw;
-  left: 5.2083333333vw;
-  background-color: #EAEAEA;
+  left: 5.3385416667vw;
+  background-color: #ffffff;
 }
 .example_text_explanation_table_cell4 {
   position: absolute;
-  top: 8.7239583333vw;
-  left: 32.03125vw;
-  background-color: #EAEAEA;
+  top: 8.8541666667vw;
+  left: 28.125vw;
+  background-color: #ffffff;
 }
 .example_text_explanation_table_cell5, .example_text_explanation_table_cell6 {
-  margin-top: 7.1614583333vw;
+  margin-top: 3.2552083333vw;
   font-family: "Oswald";
   font-weight: 400;
   font-size: 3.2552083333vw;
   line-height: 3.2552083333vw;
-  text-align: center;
   text-transform: uppercase;
   color: #000000;
-  width: 21.09375vw;
 }
 .example_picture {
   display: flex;
   flex-direction: column;
   position: relative;
   justify-content: space-between;
+  margin-top: 7.6822916667vw;
 }
 .example_picture_cat {
   width: 79.4270833333vw;
@@ -356,8 +380,8 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
 .example_picture_scrool_line {
   background: #ffffff;
   width: 55.7291666667vw;
-  height: 3.2552083333vw;
-  border-radius: 10px;
+  height: 4.4270833333vw;
+  border-radius: 2.2135416667vw;
   position: relative;
   border-color: #CDCDCD;
   z-index: 2;
@@ -366,9 +390,9 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   align-items: center;
 }
 .example_picture_scrool_line_before, .example_picture_scrool_line_after {
-  border-radius: 6px;
+  border-radius: 1.5625vw;
   width: 26.0416666667vw;
-  height: 1.8229166667vw;
+  height: 3.125vw;
 }
 .example_picture_scrool .scrool_active {
   background: #68B738;
@@ -388,42 +412,52 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   width: 100vw;
   height: 60.15625vw;
   position: absolute;
-  bottom: -78.125vw;
-  right: -14.3229166667vw;
+  bottom: -52.0833333333vw;
+  right: 0vw;
+  left: -3.90625vw;
   z-index: 1;
 }
 
 .location {
-  margin-top: 78.125vw;
-  height: 51.171875vw;
+  margin-top: 52.0833333333vw;
+  height: 50.390625vw;
   width: 100vw;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 .location_map {
-  width: 100vw;
+  width: auto;
+  height: auto;
+  order: 2;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: -42.4479166667vw;
 }
 .location_pin {
   position: absolute;
-  top: 19.53125vw;
-  left: 39.0625vw;
+  top: 18.8802083333vw;
+  left: 48.828125vw;
   width: 14.7135416667vw;
   height: 13.8020833333vw;
 }
 .location_message {
-  position: absolute;
-  width: 61.1979166667vw;
-  height: 26.0416666667vw;
-  top: 13.0208333333vw;
-  left: 13.0208333333vw;
   font-family: "Oswald";
   font-weight: 400;
   font-size: 3.90625vw;
-  line-height: 26.0416666667vw;
   text-transform: uppercase;
   background: #FFFFFF;
   color: #111111;
-  padding-left: 5.859375vw;
-  opacity: 0.8;
+  padding-left: 0vw;
+  opacity: 1;
+  order: 1;
+  position: static;
+  width: 100vw;
+  height: 19.53125vw;
+  line-height: 19.53125vw;
+  text-align: center;
 }
 
 .footer {
@@ -437,7 +471,7 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
 .footer_logo {
   width: 16.6666666667vw;
   height: 3.125vw;
-  margin-left: 14.3229166667vw;
+  margin-left: 3.90625vw;
 }
 .footer_sm {
   width: 16.796875vw;
@@ -461,11 +495,11 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
 .footer_signature {
   font-family: "Arial";
   font-weight: 400;
-  font-size: 2.0833333333vw;
-  line-height: 2.34375vw;
+  font-size: 1.8229166667vw;
+  line-height: 2.0833333333vw;
   color: #444444;
-  margin-right: 14.3229166667vw;
-  width: 20%;
+  margin-right: 6.5104166667vw;
+  width: 25%;
 }
 .footer a {
   text-decoration: underline;
