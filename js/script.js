@@ -38,6 +38,48 @@ scroolAfter.onclick = function() {
 scroolBefore.addEventListener ('mousedown', onMouseDown1);
 scroolAfter.addEventListener ('mousedown', onMouseDown2);
 
+scroolBefore.addEventListener ('touchstart', onMouseDown11);
+scroolAfter.addEventListener ('touchstart', onMouseDown22);
+
+function onMouseDown11 (event){
+    if (scroolBefore.classList.contains('scrool_active')) {
+        let firstTouch = event.touches[0].clientX;
+        document.addEventListener('touchend', onMouseMove);
+        function onMouseMove (event){
+            let carrentX = event.changedTouches[event.changedTouches.length-1].pageX;
+            if (firstTouch < carrentX) {
+                transformToAfter();           
+                document.removeEventListener ('touchend', onMouseMove);
+            } 
+        }
+    }
+}
+
+function onMouseDown22 (event){
+    if (scroolAfter.classList.contains('scrool_active')) {
+        let firstTouch = event.touches[0].clientX;
+        document.addEventListener('touchend', onMouseMove);
+        function onMouseMove (event){
+            let carrentX = event.changedTouches[event.changedTouches.length-1].pageX;
+            if (firstTouch > carrentX) {
+                transformToBefore();           
+                document.removeEventListener ('touchend', onMouseMove);
+            } 
+        }
+    }
+}
+
+var src = document.getElementById("source");
+
+src.addEventListener('touchmove', function(e) {
+  // Iterate through the touch points that have moved and log each
+  // of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
+  var i;
+  for (i=0; i < e.changedTouches.length; i++) {
+    console.log("touchpoint[" + i + "].pageX = " + e.changedTouches[i].pageX);
+    console.log("touchpoint[" + i + "].pageY = " + e.changedTouches[i].pageY);
+  }
+}, false);
   
 // scroolActive.addEventListener ('mousedown', onMouseDown);
 
