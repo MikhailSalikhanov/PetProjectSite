@@ -73,8 +73,13 @@
         top: adapt(-100);
         height: adapt(52);
         width: adapt(174);
+
+        img{
+            width: 100%;
+            height: 100%;
         }
-    }
+     }
+}
 
 .head {
 
@@ -145,14 +150,11 @@
         top: adapt(200);
         z-index: -1;
 
+        img{
+            width: 100%;
+            height: 100%;
+        }
     }
-}
-
-img{
-    // width: 100%;
-    // height: 100%;
-    width: auto;
-    height: auto;
 }
 
 .cards {
@@ -441,7 +443,7 @@ img{
         margin-top: adapt(59);
         
         &_cat{
-            width: adapt(610);
+            width: adapt(668);
             height: adapt(536);
             z-index: 2;
             display: flex;
@@ -453,6 +455,11 @@ img{
             position: absolute;
             left: 0;
             right: 0;
+            
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
 
 .hidden_cat{
@@ -623,8 +630,15 @@ img{
         margin-right: adapt(50);
         width: 25%;
     }
+
     a{
         text-decoration: underline;
     }
 }
 
+img{
+    // width: 100%;
+    // height: 100%;
+    width: auto;
+    height: auto;
+}
