@@ -23,3 +23,10 @@ scroolAfter.onclick = function () {
     cat2.classList.add('unhidden_cat');
 };
        
+
+let cards = document.querySelectorAll('.cards_wrapper');
+for (let one of cards)
+    one.onclick = function(){
+    one.classList.toggle("cards_wrapper_clicked");
+}
+

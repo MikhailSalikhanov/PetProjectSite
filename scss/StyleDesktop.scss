@@ -143,12 +143,19 @@ img{
         transition-duration: 1s;
         
         &:hover{
+                .cards_item_front, .cards_link {
+                    z-index: -1;
+                    background-color: #dfdfdf;
+                }
+        }
+        
+        &_clicked {
             transform: rotateY(180deg);
             .cards_item_front{
                 z-index: -1;
             }
         }
-    }
+        }
 
     &_item_front {
         width: adapt(570);
@@ -425,8 +432,8 @@ a
             &_line{
                 background: #ffffff;
                 width: adapt(428);
-                height: adapt(25);
-                border-radius: 10px;
+                height: adapt(34);
+                border-radius: adapt(17);
                 position: relative;
                 border-color: #CDCDCD;
                 z-index: 2;
@@ -435,9 +442,9 @@ a
                 align-items: center;
                 
                 &_before, &_after{
-                    border-radius: 6px;
+                    border-radius: adapt(12);
                     width: adapt(200);
-                    height: adapt(14);
+                    height: adapt(24);
                 }
             }
 

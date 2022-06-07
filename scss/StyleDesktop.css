@@ -117,10 +117,14 @@ img {
   transform-style: preserve-3d;
   transition-duration: 1s;
 }
-.cards_wrapper:hover {
+.cards_wrapper:hover .cards_item_front, .cards_wrapper:hover .cards_link {
+  z-index: -1;
+  background-color: #dfdfdf;
+}
+.cards_wrapper_clicked {
   transform: rotateY(180deg);
 }
-.cards_wrapper:hover .cards_item_front {
+.cards_wrapper_clicked .cards_item_front {
   z-index: -1;
 }
 .cards_item_front {
@@ -359,8 +363,8 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
 .example_picture_scrool_line {
   background: #ffffff;
   width: 29.7222222222vw;
-  height: 1.7361111111vw;
-  border-radius: 10px;
+  height: 2.3611111111vw;
+  border-radius: 1.1805555556vw;
   position: relative;
   border-color: #CDCDCD;
   z-index: 2;
@@ -369,9 +373,9 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   align-items: center;
 }
 .example_picture_scrool_line_before, .example_picture_scrool_line_after {
-  border-radius: 6px;
+  border-radius: 0.8333333333vw;
   width: 13.8888888889vw;
-  height: 0.9722222222vw;
+  height: 1.6666666667vw;
 }
 .example_picture_scrool .scrool_active {
   background: #68B738;
