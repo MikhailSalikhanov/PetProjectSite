@@ -9,6 +9,9 @@
   left: 59.1666666667vw;
   top: 4.7916666667vw;
 }
+.navigation_mobile {
+  display: none;
+}
 .navigation_menu {
   width: 33.1944444444vw;
   font-family: "Oswald";
@@ -354,13 +357,13 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   opacity: 1;
   transition-duration: 4s;
 }
-.example_picture_scrool {
+.example_picture_scroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3.8194444444vw;
 }
-.example_picture_scrool_line {
+.example_picture_scroll_line {
   background: #ffffff;
   width: 29.7222222222vw;
   height: 2.3611111111vw;
@@ -372,16 +375,16 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   justify-content: space-around;
   align-items: center;
 }
-.example_picture_scrool_line_before, .example_picture_scrool_line_after {
+.example_picture_scroll_line_before, .example_picture_scroll_line_after {
   border-radius: 0.8333333333vw;
   width: 13.8888888889vw;
   height: 1.6666666667vw;
 }
-.example_picture_scrool .scrool_active {
+.example_picture_scroll .scroll_active {
   background: #68B738;
   transition-duration: 2s;
 }
-.example_picture_scrool_text {
+.example_picture_scroll_text {
   font-family: "Oswald";
   font-weight: 400;
   font-size: 1.3888888889vw;
@@ -407,8 +410,8 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
 }
 .location_pin {
   position: absolute;
-  top: 10.4166666667vw;
-  left: 48.6111111111vw;
+  top: 6.9444444444vw;
+  left: 45.625vw;
   width: 7.8472222222vw;
   height: 7.3611111111vw;
 }
@@ -427,6 +430,20 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   color: #111111;
   padding-left: 3.125vw;
   opacity: 0.8;
+}
+.location iframe {
+  width: 100%;
+  height: 27.2916666667vw;
+}
+.location .hidden_pin {
+  opacity: 0;
+}
+.location .unhidden_pin {
+  opacity: 1;
+}
+.location .none_pin {
+  display: none;
+  opacity: 0;
 }
 
 .footer {

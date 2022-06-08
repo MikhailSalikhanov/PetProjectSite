@@ -17,6 +17,9 @@
     left: adapt(852);
     top: adapt(69);
     
+    &_mobile{
+        display: none;
+    }
 
     &_menu{
         width: adapt(478);
@@ -423,7 +426,7 @@ a
     transition-duration: 4s;
 }
 
-        &_scrool{
+        &_scroll{
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -448,7 +451,7 @@ a
                 }
             }
 
-.scrool_active{
+.scroll_active{
         background: #68B738;
         transition-duration: 2s;
 
@@ -485,8 +488,8 @@ a
     
     &_pin{
         position: absolute;
-        top: adapt(150);
-        left: adapt(700);
+        top: adapt(100);
+        left: adapt(657);
         width: adapt(113);
         height: adapt(106);
     }
@@ -507,6 +510,24 @@ a
         padding-left: adapt(45);
         opacity: 0.8;
         }
+    iframe{
+        width: 100%;
+        height: adapt(393);
+    }
+
+
+    .hidden_pin{
+            opacity: 0;
+    }
+        
+    .unhidden_pin{
+            opacity: 1;
+    }
+
+    .none_pin{
+        display: none;
+        opacity: 0;
+    }
 }
 
 .footer {

@@ -1,82 +1,106 @@
 @use "sass:math";
 
 @function adapt($px) {
-    $result1: math.div($px, 768) * 100;
+    $result1: math.div($px, 320) * 100;
     $result2: $result1 + vw;
     @return $result2;
 };
 
 .wrapper{
     // position: relative;
-    width: adapt(768);
-    background: #ffffff;
+    width: adapt(320);
+    background: #FFFFFF;
+    border: 1px red solid;
 }
 
 .navigation{
+    width: adapt(280);
     position: static;
-    margin-left: adapt(0);
-    margin-right: adapt(50);
-    margin-top: adapt(42);
+    margin-left: adapt(20);
+    margin-right: adapt(20);
+    margin-top: adapt(11);
     display: flex;
-    margin-bottom: adapt(62);
-    justify-content: flex-end;   
+    margin-bottom: adapt(17);
+
     
     &_mobile{
-        display: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &_logo{
+            width: adapt(34);
+            height: adapt(38);
+        }
+
+        &_text{
+            width: adapt(101);
+            height: adapt(18);
+        }
     }
     
     &_menu{
-        width: adapt(374);
-        font-size: adapt(18);
-        line-height: adapt(24);
-        color: #000000;
-        display: flex;
-        justify-content: space-between;
+        display: none;
+        // width: adapt(374);
+        // font-size: adapt(18);
+        // line-height: adapt(24);
+        // color: #000000;
+        // display: flex;
+        // justify-content: space-between;
 
-        & a:hover{
-            opacity: 0.6;
-        }
+        // & a:hover{
+        //     opacity: 0.6;
+        // }
     }
 }
 
 
 .header {
     height: adapt(284);
-    width: adapt(600);
+    width: adapt(320);
     // width: 100%;
-    margin-left: adapt(113);
+    margin-left: adapt(0);
     position: relative;
     z-index: 2;
 
     &_left {
         height: adapt(284);
         height: 100%;
-        width: 100%;
+        width: 50%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
 
 
         form{
-            width: adapt(264);
+            width: adapt(320);
         }
     }
 
     &_right {
-        height: 100%;
-        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: adapt(320);
+        height: adapt(305);
+        display: block;
+        z-index: -1;
+
 
         &_image{
-            display: none;
+            display: block;
+            width: 100%;
         }
     }
 
     &_logo {
-        position: absolute;
-        left: adapt(-87);
-        top: adapt(-100);
-        height: adapt(52);
-        width: adapt(174);
+        display: none;
+        // position: absolute;
+        // left: adapt(-87);
+        // top: adapt(-100);
+        // height: adapt(52);
+        // width: adapt(174);
 
         img{
             width: 100%;
@@ -89,24 +113,27 @@
 
     &_title {
         position: static;
-        width: adapt(330);
-        height: adapt(120);
+        width: adapt(200);
+        margin: adapt(26) adapt(60);
+        height: adapt(72);
         // position: absolute;
         // left: adapt(190);
         // top: adapt(223);
         // font-family: 'Oswald';
         // font-style: normal;
         // font-weight: 400;
-        font-size: adapt(60);
-        line-height: adapt(60);
-        color: #000000;
+        font-size: adapt(36);
+        line-height: adapt(36);
+        color: #ffffff;
+        text-align: center;
     }
 
     &_subtitle {
         position: static;
-        width: adapt(283);
+        width: adapt(200);
+        margin: 0 adapt(60);
         height: adapt(64);
-        line-height: 140%;
+        line-height: 100%;
         // position: absolute;
         // left: adapt(190);
         // top: adapt(373);
@@ -114,9 +141,10 @@
         // font-family: 'Oswald';
         // font-style: normal;
         // font-weight: 400;
-        font-size: adapt(20);
+        font-size: adapt(14);
+        text-align: center;
         // text-transform: uppercase;
-        // color: #000000;
+        color: #ffffff;
     }
 
     &_button {
@@ -124,7 +152,7 @@
         padding: adapt(14) adapt(26);
         gap: adapt(4);
         // position: absolute;
-        width: adapt(264);
+        width: adapt(280);
         height: adapt(54);
         // left: adapt(190);
         // top: adapt(455);
@@ -133,9 +161,10 @@
         // font-family: 'Oswald';
         // font-style: normal;
         // font-weight: 400;
-        font-size: adapt(20);
+        font-size: adapt(14);
         // color: #FFFFFF;
         z-index: 2;
+        margin: adapt(302) adapt(20) adapt(20) adapt(20);
 
     }
 
@@ -148,11 +177,11 @@
 
     &_img {
         position: absolute;
-        width: adapt(509);
-        height: adapt(409);
-        left: adapt(40);
-        top: adapt(200);
-        z-index: -1;
+        width: adapt(280);
+        height: adapt(270);
+        left: adapt(20);
+        top: adapt(180);
+        z-index: 1;
 
         img{
             width: 100%;
@@ -164,15 +193,22 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: adapt(356) adapt(30) adapt(0) adapt(30);
-    perspective: adapt(1000);
-    height: adapt(774);
+    justify-content: center;
+    margin: adapt(230) adapt(20) adapt(0) adapt(20);
+    perspective: adapt(320);
+    height: adapt(552);
 
-     &_wrapper{
+    &_wrapper{
         position: relative;
         transform-style: preserve-3d;
         transition-duration: 1s;
+        height: adapt(266);
+        margin: 0;
+
+    &:first-child{
+        margin-bottom: adapt(20);
+    }
+
 
         &:hover{
             .cards_item_front, .cards_link {
@@ -191,7 +227,7 @@
 
     &_item_front {
         width: 100%;
-        height: adapt(372);
+        height: adapt(266);
         background: #F2F2F2;
         display: flex;
         flex-wrap: wrap;
@@ -202,10 +238,10 @@
 
     &_item_back{
         position: absolute;
-        left: adapt(-50);
+        left: adapt(70);
         top: 0;
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        height: adapt(266);
         transform: rotateY(180deg);
         backface-visibility: hidden;
 
@@ -218,29 +254,29 @@
 
     &_header {
         font-weight: 400;
-        font-size: adapt(36);
-        line-height: adapt(36);
+        font-size: adapt(24);
+        line-height: adapt(37);
+        margin-top: adapt(30);
         text-transform: uppercase;
         color: #000000;
     }
 
     &_text {
-        margin-left: adapt(52);
-        margin-right: adapt(52);
+        margin: adapt(20);
         font-family: 'Arial';
         font-weight: 400;
-        font-size: adapt(16);
-        line-height: adapt(24);
+        font-size: adapt(14);
+        line-height: adapt(18);
     }
 
     &_link {
-        margin-top: adapt(23);
-        margin-left: adapt(52);
-        margin-bottom: adapt(55);
-        width: adapt(162);
+        margin-top: adapt(0);
+        margin-left: adapt(19);
+        margin-bottom: adapt(18);
+        width: adapt(134);
         font-weight: 400;
-        font-size: adapt(20);
-        line-height: adapt(30);     
+        font-size: adapt(16);
+        line-height: adapt(24);     
         text-align: left;
         text-transform: uppercase;
         color: #000000;
@@ -254,24 +290,24 @@
             height: adapt(12);
             display: inline-block;
             position: absolute;
-            top: adapt(11);
-            left: adapt(126);
+            top: adapt(8);
+            left: adapt(106);
         }
     }
 
     &_img{
-        margin: adapt(44) adapt(62) adapt(39) adapt(52);
+        margin: adapt(24) adapt(20) adapt(0) adapt(13);
         // object-position: 50% 50%;
     }
 
     .img_slim{
-        width: adapt(100);
-        height: adapt(106);
+        width: adapt(50);
+        height: adapt(53);
     }
 
     .img_pro{
-        width: adapt(134);
-        height: adapt(100);
+        width: adapt(67);
+        height: adapt(50);
     }
 }
 
@@ -281,30 +317,35 @@
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 400;
-        font-size: adapt(60);
-        line-height: adapt(60);
+        font-size: adapt(36);
+        line-height: adapt(40);
         text-align: left; 
-        margin: adapt(55) 0 adapt(72) adapt(30);
+        margin: adapt(27) 0 adapt(38) adapt(20);
     }
 
     &_wrapper {
-        margin: 0 adapt(30) 0 adapt(30);
+        margin: 0 adapt(20) 0 adapt(20);
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        height: adapt(300);
     }
 
     &_item {
         width: adapt(270);
-        height: adapt(300);
+        height: adapt(60);
         position: relative;
         z-index: 2;
+        display: flex;
+
     }
 
     &_image {
-        width: adapt(80);
-        height: adapt(80);
-        margin-bottom: adapt(31);
+        width: adapt(60);
+        height: adapt(60);
+        flex-shrink: 0;
+        margin-bottom: adapt(20);
+        margin-right: adapt(20);
         img{
             width: 100%;
             height: 100%;
@@ -315,14 +356,17 @@
         font-family: 'Arial';
         font-style: normal;
         font-weight: 400;
-        font-size: adapt(18);
-        padding-right: adapt(10);
-        line-height: adapt(24);
+        font-size: adapt(14);
+        padding-right: adapt(0);
+        line-height: adapt(20);
         color: #444444;
         z-index: 3;
+        display: flex;
+        align-items: center;
     }
 
     &_number {
+        display: none;
         color: #F2F2F2;
         font-size: adapt(280);
         line-height: adapt(280);
@@ -337,8 +381,8 @@
 .example {
     display: flex;
     justify-content: space-between;
-    margin: 0 adapt(30) 0 adapt(30);
-    height: adapt(656);
+    margin: 0 adapt(20) 0 adapt(20);
+    height: adapt(705);
     position: relative;
     flex-wrap: wrap;
 
@@ -349,21 +393,21 @@
         &_header {
             font-family: 'Oswald';
             font-weight: 400;
-            font-size: adapt(60);
-            line-height: adapt(60);
-            margin-bottom: adapt(63);
-            margin-top: adapt(38);
+            font-size: adapt(36);
+            line-height: adapt(36);
+            margin-bottom: adapt(33);
+            margin-top: adapt(69);
         }
 
         &_explanation {
             font-family: 'Arial';
             font-weight: 400;
-            font-size: adapt(16);
-            line-height: adapt(24);
+            font-size: adapt(14);
+            line-height: adapt(18);
             color: #444444;
 
             &_story{
-                margin-bottom: adapt(54);
+                margin-bottom: adapt(26);
                 padding-right: adapt(0);
                 // width: adapt(436);
             }
@@ -372,7 +416,7 @@
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
-                width: adapt(686);
+                width: adapt(280);
                 position: relative;
                 z-index: 2;
 
@@ -383,41 +427,40 @@
                     order: 2;
                 }
                 &_cell3{
-                    order: 5;
+                    order: 3;
                 }
                 &_cell4{
-                    order: 6;
+                    order: 4;
                 }
                 &_cell5{
-                    order: 3;
+                    order: 5;
                     text-align: right;
-                    width: adapt(262);
+                    width: adapt(135);
 
                 }
                 &_cell6{
-                    order: 4;
+                    order: 6;
                     text-align: left;
-                    width: adapt(62);
+                    width: adapt(135);
                 }
 
                 &_cell1, &_cell2{
                     font-family: 'Oswald';
                     font-weight: 400;
-                    font-size: adapt(30);
+                    font-size: adapt(24);
                     line-height: adapt(57);
                     text-align: center;
                     color: #000000;
                     border: 1px solid #CDCDCD;
-                    width: adapt(162);
-                    height: adapt(77);
-                    width: adapt(162);
+                    width: adapt(124);
+                    height: adapt(64);
                 }
 
                 &_cell3, &_cell4{
                     font-family: 'Arial';
                     font-weight: 400;
-                    font-size: adapt(16);
-                    line-height: adapt(16);
+                    font-size: adapt(12);
+                    line-height: adapt(12);
                     text-align: center;
                     color: #444444;
                     background-color: #FFFFFF;
@@ -426,24 +469,24 @@
 
                 &_cell3{
                     position: absolute;
-                    top: adapt(68);
-                    left: adapt(41);
-                    background-color: #ffffff;
+                    top: adapt(56);
+                    left: adapt(30);
+                    background-color: #EAEAEA;
                 }
 
                 &_cell4{
                     position: absolute;
-                    top: adapt(68);
-                    left: adapt(216);
-                    background-color: #ffffff;
+                    top: adapt(56);
+                    left: adapt(188);
+                    background-color: #EAEAEA;
                 }
 
                 &_cell5, &_cell6{
                     margin-top: adapt(25);
                     font-family: 'Oswald';
                     font-weight: 400;
-                    font-size: adapt(25);
-                    line-height: adapt(25);
+                    font-size: adapt(14);
+                    line-height: adapt(20);
                     // text-align: center;
                     text-transform: uppercase;
                     color: #000000;
@@ -457,11 +500,11 @@
         flex-direction: column;
         position: relative;
         justify-content: space-between;
-        margin-top: adapt(59);
+        margin-top: adapt(42);
         
         &_cat{
-            width: adapt(668);
-            height: adapt(536);
+            width: adapt(280);
+            height: adapt(232);
             z-index: 2;
             display: flex;
             position: relative;
@@ -501,9 +544,9 @@
 
             &_line{
                 background: #ffffff;
-                width: adapt(428);
-                height: adapt(34);
-                border-radius: adapt(17);
+                width: adapt(160);
+                height: adapt(16);
+                border-radius: adapt(8);
                 position: relative;
                 border-color: #CDCDCD;
                 z-index: 2;
@@ -512,9 +555,9 @@
                 align-items: center;
                 
                 &_before, &_after{
-                    border-radius: adapt(12);
-                    width: adapt(200);
-                    height: adapt(24);
+                    border-radius: adapt(6);
+                    width: adapt(150);
+                    height: adapt(12);
                 }
             }
 
@@ -527,8 +570,8 @@
             &_text{
                 font-family: 'Oswald';
                 font-weight: 400;
-                font-size: adapt(20);
-                line-height: adapt(30);
+                font-size: adapt(16);
+                line-height: adapt(20);
                 text-transform: uppercase;
                 margin: 0 adapt(10);
                 z-index: 2;
@@ -539,20 +582,20 @@
 
     &_background{
         background: #EAEAEA;
-        width: adapt(768);
-        height: adapt(462);
+        width: adapt(320);
+        height: adapt(677);
         position: absolute;
-        bottom: adapt(-400);
+        bottom: adapt(0);
         right: adapt(0);
-        left: adapt(-30);
+        left: adapt(-20);
         z-index: 1;
     }
 }
 
 .location{
-    margin-top: adapt(400);
+    margin-top: adapt(0);
     height: adapt(387);
-    width: adapt(768);
+    width: adapt(320);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -582,7 +625,7 @@
         // left: adapt(100);
         font-family: 'Oswald';
         font-weight: 400;
-        font-size: adapt(30);
+        font-size: adapt(16);
         text-transform: uppercase;
         background: #FFFFFF;
         color: #111111;
@@ -591,15 +634,15 @@
         opacity: 1;
         order: 1;
         position: static;
-        width: adapt(768);
-        height: adapt(150);
-        line-height: adapt(150);
+        width: adapt(320);
+        height: adapt(114);
+        line-height: adapt(114);
         text-align: center;
         }
 
         iframe{
-            width: 100%;
-            height: adapt(393);
+            width: adapt(320);
+            height: adapt(362);
             order: 2;
         }
 
@@ -624,7 +667,7 @@
     &_logo {
         width: adapt(128);
         height: adapt(24);
-        margin-left: adapt(30);
+        margin-left: adapt(20);
         img{
             width: 100%;
             height: 100%;
@@ -658,11 +701,11 @@
     &_signature {
         font-family: 'Arial';
         font-weight: 400;
-        font-size: adapt(14);
-        line-height: adapt(16);
+        font-size: adapt(8);
+        line-height: adapt(10);
         color: #444444;
 
-        margin-right: adapt(30);
+        margin-right: adapt(20);
         width: 25%;
     }
 
