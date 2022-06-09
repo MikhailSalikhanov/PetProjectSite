@@ -1,4 +1,4 @@
 @import url(../scss/Reset.css);
 @import url(../scss/StyleDesktop.css);
 @import url(../scss/StyleTablet.css) (max-width: 768px);
-@import url(../scss/StyleMobile.css) (max-width: 400px);/*# sourceMappingURL=style.css.map */
+@import url(../scss/StyleMobile.css) (max-width: 500px);/*# sourceMappingURL=style.css.map */
