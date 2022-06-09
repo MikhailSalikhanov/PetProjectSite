@@ -93,6 +93,13 @@ function onMouseDown2 (event){
     }
 }
     
+
+let cards = document.querySelectorAll('.cards_wrapper');
+for (let one of cards)
+    one.onclick = function(){
+    one.classList.toggle("cards_wrapper_clicked");
+}
+
 document.querySelector('.navigation_mobile_menu').onclick = function(){
     document.querySelector('.navigation_mobile_menu').classList.toggle('burgerOpen');
     document.querySelector('.navigation_menu').classList.toggle('burgerOpen');
