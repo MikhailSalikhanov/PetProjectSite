@@ -421,15 +421,27 @@ a .example_text_explanation_table_cell3, .example_text_explanation_table_cell4 {
   height: 13.8888888889vw;
   top: 6.9444444444vw;
   left: 6.9444444444vw;
-  font-family: "Oswald";
-  font-weight: 400;
-  font-size: 2.0833333333vw;
-  line-height: 13.8888888889vw;
-  text-transform: uppercase;
   background: #FFFFFF;
   color: #111111;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.8611111111vw;
+}
+.location_message_1 {
+  font-size: 1.8055555556vw;
+  line-height: 2.7777777778vw;
+  text-transform: uppercase;
   padding-left: 3.125vw;
-  opacity: 0.8;
+  font-family: "Oswald";
+  font-weight: 400;
+}
+.location_message_2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1111111111vw;
+  line-height: 2.0833333333vw;
+  padding-right: 3.125vw;
 }
 .location iframe {
   width: 100%;

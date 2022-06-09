@@ -541,20 +541,32 @@ div.burgerOpen::before {
   height: 16.5625vw;
 }
 .location_message {
-  font-family: "Oswald";
-  font-weight: 400;
-  font-size: 5vw;
   text-transform: uppercase;
   background: #FFFFFF;
   color: #111111;
-  padding-left: 0vw;
   opacity: 1;
   order: 1;
   position: static;
   width: 100vw;
   height: 35.625vw;
   line-height: 35.625vw;
-  text-align: center;
+  gap: 10.9375vw;
+  display: flex;
+  justify-content: space-between;
+}
+.location_message_1 {
+  font-size: 5vw;
+  line-height: 7.5vw;
+  text-transform: uppercase;
+  padding-left: 7.8125vw;
+  font-family: "Oswald";
+  font-weight: 400;
+}
+.location_message_2 {
+  font-family: Arial;
+  font-size: 4.375vw;
+  line-height: 5.625vw;
+  padding-right: 4.6875vw;
 }
 .location iframe {
   width: 100vw;

@@ -453,9 +453,6 @@
   height: 13.8020833333vw;
 }
 .location_message {
-  font-family: "Oswald";
-  font-weight: 400;
-  font-size: 3.90625vw;
   text-transform: uppercase;
   background: #FFFFFF;
   color: #111111;
@@ -465,8 +462,23 @@
   position: static;
   width: 100vw;
   height: 19.53125vw;
-  line-height: 19.53125vw;
-  text-align: center;
+  gap: 38.4114583333vw;
+  display: flex;
+  justify-content: space-between;
+}
+.location_message_1 {
+  font-size: 2.6041666667vw;
+  line-height: 3.90625vw;
+  text-transform: uppercase;
+  padding-left: 9.2447916667vw;
+  font-family: "Oswald";
+  font-weight: 400;
+}
+.location_message_2 {
+  font-family: Arial;
+  font-size: 2.0833333333vw;
+  line-height: 2.6041666667vw;
+  padding-right: 9.2447916667vw;
 }
 .location iframe {
   width: 100%;

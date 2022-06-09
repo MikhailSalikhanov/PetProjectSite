@@ -89,9 +89,6 @@
         color: #000000;
         background-color: #65a93c;
         transition-duration: 1s;
-        // & a:hover{
-        //     opacity: 0.6;
-        // }
     }
 }
 
@@ -128,7 +125,6 @@ div.burgerOpen::before{
 .header {
     height: adapt(284);
     width: adapt(320);
-    // width: 100%;
     margin-left: adapt(0);
     position: relative;
     z-index: 2;
@@ -165,11 +161,6 @@ div.burgerOpen::before{
 
     &_logo {
         display: none;
-        // position: absolute;
-        // left: adapt(-87);
-        // top: adapt(-100);
-        // height: adapt(52);
-        // width: adapt(174);
 
         img{
             width: 100%;
@@ -185,12 +176,6 @@ div.burgerOpen::before{
         width: adapt(200);
         margin: adapt(26) adapt(60);
         height: adapt(72);
-        // position: absolute;
-        // left: adapt(190);
-        // top: adapt(223);
-        // font-family: 'Oswald';
-        // font-style: normal;
-        // font-weight: 400;
         font-size: adapt(36);
         line-height: adapt(36);
         color: #ffffff;
@@ -203,16 +188,8 @@ div.burgerOpen::before{
         margin: 0 adapt(60);
         height: adapt(64);
         line-height: 100%;
-        // position: absolute;
-        // left: adapt(190);
-        // top: adapt(373);
-        // min-height: adapt(60);
-        // font-family: 'Oswald';
-        // font-style: normal;
-        // font-weight: 400;
         font-size: adapt(14);
         text-align: center;
-        // text-transform: uppercase;
         color: #ffffff;
     }
 
@@ -220,18 +197,9 @@ div.burgerOpen::before{
         position: static;
         padding: adapt(14) adapt(26);
         gap: adapt(4);
-        // position: absolute;
         width: adapt(280);
         height: adapt(54);
-        // left: adapt(190);
-        // top: adapt(455);
-        // text-transform: uppercase;
-        // background: #68B738;
-        // font-family: 'Oswald';
-        // font-style: normal;
-        // font-weight: 400;
         font-size: adapt(14);
-        // color: #FFFFFF;
         z-index: 2;
         margin: adapt(302) adapt(20) adapt(20) adapt(20);
 
@@ -254,7 +222,6 @@ div.burgerOpen::before{
 
         img{
             width: 100%;
-            // height: 100%;
         }
     }
 }
@@ -309,16 +276,11 @@ div.burgerOpen::before{
         position: absolute;
         left: adapt(0);
         top: 0;
-        // width: 100%;
         height: adapt(266);
         transform: rotateY(180deg);
         backface-visibility: hidden;
-        // overflow: hidden;
 
         img{
-            // float: none;
-            // width: 100%;
-            // height: adapt(266);
             width: adapt(278);
             object-fit: cover;
         }
@@ -369,7 +331,6 @@ div.burgerOpen::before{
 
     &_img{
         margin: adapt(24) adapt(20) adapt(0) adapt(13);
-        // object-position: 50% 50%;
     }
 
     .img_slim{
@@ -481,7 +442,6 @@ div.burgerOpen::before{
             &_story{
                 margin-bottom: adapt(26);
                 padding-right: adapt(0);
-                // width: adapt(436);
             }
     
             &_table{
@@ -559,7 +519,6 @@ div.burgerOpen::before{
                     font-weight: 400;
                     font-size: adapt(14);
                     line-height: adapt(20);
-                    // text-align: center;
                     text-transform: uppercase;
                     color: #000000;
                 }
@@ -669,16 +628,6 @@ div.burgerOpen::before{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-
-    // &_map{
-    //     width: auto;
-    //     height: auto;
-    //     order: 2;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     position: absolute;
-    //     left: adapt(-326);
-    // }
     
     &_pin{
         position: absolute;
@@ -691,24 +640,35 @@ div.burgerOpen::before{
 
     &_message{
         
-        // top: adapt(100);
-        // left: adapt(100);
-        font-family: 'Oswald';
-        font-weight: 400;
-        font-size: adapt(16);
         text-transform: uppercase;
         background: #FFFFFF;
         color: #111111;
-
-        padding-left: adapt(0);
         opacity: 1;
         order: 1;
         position: static;
         width: adapt(320);
         height: adapt(114);
         line-height: adapt(114);
-        text-align: center;
+        gap: adapt(35);
+        display: flex;
+        justify-content: space-between;
+
+        &_1{
+            font-size: adapt(16);
+            line-height: adapt(24);
+            text-transform: uppercase;
+            padding-left: adapt(25);
+            font-family: 'Oswald';
+            font-weight: 400;
         }
+
+        &_2{
+            font-family: Arial;
+            font-size: adapt(14);
+            line-height: adapt(18);
+            padding-right: adapt(15);
+        }
+    }
 
         iframe{
             width: adapt(320);
@@ -797,8 +757,6 @@ div.burgerOpen::before{
 }
 
 img{
-    // width: 100%;
-    // height: 100%;
     width: auto;
     height: auto;
 }

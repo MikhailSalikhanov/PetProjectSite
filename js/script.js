@@ -93,31 +93,6 @@ function onMouseDown2 (event){
     }
 }
     
-
-let cards = document.querySelectorAll('.cards_wrapper');
-for (let one of cards)
-    one.onclick = function(){
-    one.classList.toggle("cards_wrapper_clicked");
-}
-
-
-let map = document.querySelector('.location_frame');
-let pin = document.querySelector('.location_pin');
-
-map.onmouseover = function(){
-    pin.classList.add('hidden_pin');
-    pin.classList.remove('unhidden_pin');
-}
-
-map.onmousedown = function(){
-    pin.classList.add('none_pin');
-}
-
-map.onmouseout = function(){
-    pin.classList.add('unhidden_pin');
-    pin.classList.remove('hidden_pin');
-}
-
 document.querySelector('.navigation_mobile_menu').onclick = function(){
     document.querySelector('.navigation_mobile_menu').classList.toggle('burgerOpen');
     document.querySelector('.navigation_menu').classList.toggle('burgerOpen');

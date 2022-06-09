@@ -7,7 +7,6 @@
 };
 
 .wrapper{
-    // position: relative;
     width: adapt(768);
     background: #ffffff;
 }
@@ -43,7 +42,6 @@
 .header {
     height: adapt(284);
     width: adapt(600);
-    // width: 100%;
     margin-left: adapt(113);
     position: relative;
     z-index: 2;
@@ -91,12 +89,6 @@
         position: static;
         width: adapt(330);
         height: adapt(120);
-        // position: absolute;
-        // left: adapt(190);
-        // top: adapt(223);
-        // font-family: 'Oswald';
-        // font-style: normal;
-        // font-weight: 400;
         font-size: adapt(60);
         line-height: adapt(60);
         color: #000000;
@@ -107,36 +99,17 @@
         width: adapt(283);
         height: adapt(64);
         line-height: 140%;
-        // position: absolute;
-        // left: adapt(190);
-        // top: adapt(373);
-        // min-height: adapt(60);
-        // font-family: 'Oswald';
-        // font-style: normal;
-        // font-weight: 400;
         font-size: adapt(20);
-        // text-transform: uppercase;
-        // color: #000000;
     }
 
     &_button {
         position: static;
         padding: adapt(14) adapt(26);
         gap: adapt(4);
-        // position: absolute;
         width: adapt(264);
         height: adapt(54);
-        // left: adapt(190);
-        // top: adapt(455);
-        // text-transform: uppercase;
-        // background: #68B738;
-        // font-family: 'Oswald';
-        // font-style: normal;
-        // font-weight: 400;
         font-size: adapt(20);
-        // color: #FFFFFF;
         z-index: 2;
-
     }
 
     &_button:hover{
@@ -156,7 +129,6 @@
 
         img{
             width: 100%;
-            // height: 100%;
         }
     }
 }
@@ -211,7 +183,6 @@
 
         img{
             float: center;
-            // width: 100%;
             height: 100%;
         }
     }
@@ -261,7 +232,6 @@
 
     &_img{
         margin: adapt(44) adapt(62) adapt(39) adapt(52);
-        // object-position: 50% 50%;
     }
 
     .img_slim{
@@ -365,7 +335,6 @@
             &_story{
                 margin-bottom: adapt(54);
                 padding-right: adapt(0);
-                // width: adapt(436);
             }
     
             &_table{
@@ -444,7 +413,6 @@
                     font-weight: 400;
                     font-size: adapt(25);
                     line-height: adapt(25);
-                    // text-align: center;
                     text-transform: uppercase;
                     color: #000000;
                 }
@@ -480,16 +448,12 @@
         }
 
 .hidden_cat{
-    // width: 0px;
-    // visibility: hidden;
-    // transform: scale(0, 0);
     opacity: 0;
     transition-duration: 4s;
 }
 
 .unhidden_cat{
     opacity: 1;
-    // transform: scale(1, 1);
     transition-duration: 4s;
 }
 
@@ -518,11 +482,10 @@
                 }
             }
 
-.scroll_active{
-        background: #68B738;
-        transition-duration: 2s;
-
-}
+        .scroll_active{
+                background: #68B738;
+                transition-duration: 2s;
+        }
 
             &_text{
                 font-family: 'Oswald';
@@ -558,16 +521,6 @@
     flex-direction: column;
     overflow: hidden;
 
-    // &_map{
-    //     width: auto;
-    //     height: auto;
-    //     order: 2;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     position: absolute;
-    //     left: adapt(-326);
-    // }
-    
     &_pin{
         position: absolute;
         top: adapt(170);
@@ -577,12 +530,7 @@
     }
 
     &_message{
-        
-        // top: adapt(100);
-        // left: adapt(100);
-        font-family: 'Oswald';
-        font-weight: 400;
-        font-size: adapt(30);
+       
         text-transform: uppercase;
         background: #FFFFFF;
         color: #111111;
@@ -593,9 +541,28 @@
         position: static;
         width: adapt(768);
         height: adapt(150);
-        line-height: adapt(150);
-        text-align: center;
+        gap: adapt(295);
+        display: flex;
+        justify-content: space-between;
+
+        &_1{
+            font-size: adapt(20);
+            line-height: adapt(30);
+            text-transform: uppercase;
+            padding-left: adapt(71);
+            font-family: 'Oswald';
+            font-weight: 400;
         }
+
+        &_2{
+            font-family: Arial;
+            font-size: adapt(16);
+            line-height: adapt(20);
+            padding-right: adapt(71);
+        }
+    }
+
+        
 
         iframe{
             width: 100%;
@@ -672,8 +639,6 @@
 }
 
 img{
-    // width: 100%;
-    // height: 100%;
     width: auto;
     height: auto;
 }
