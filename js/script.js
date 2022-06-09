@@ -117,3 +117,5 @@ map.onmouseout = function(){
     pin.classList.add('unhidden_pin');
     pin.classList.remove('hidden_pin');
 }
+
+document.querySelector('.location_message').innerText = window.innerWidth;
