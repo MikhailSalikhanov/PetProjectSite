@@ -1,7 +1,6 @@
 .wrapper {
   width: 100vw;
   background: #FFFFFF;
-  border: 1px red solid;
 }
 
 .navigation {
@@ -157,7 +156,7 @@
 }
 .cards_item_back {
   position: absolute;
-  left: 21.875vw;
+  left: 0vw;
   top: 0;
   height: 83.125vw;
   transform: rotateY(180deg);
@@ -165,8 +164,9 @@
           backface-visibility: hidden;
 }
 .cards_item_back img {
-  float: center;
-  height: 100%;
+  width: 86.875vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cards_header {
   font-weight: 400;
@@ -431,7 +431,7 @@
 }
 .example_picture_scroll_line_before, .example_picture_scroll_line_after {
   border-radius: 1.875vw;
-  width: 46.875vw;
+  width: 23.125vw;
   height: 3.75vw;
 }
 .example_picture_scroll .scroll_active {
@@ -518,6 +518,7 @@
   padding-left: 30vw;
   width: 100vw;
   height: 29.6875vw;
+  margin-left: 0;
 }
 .footer_logo img {
   width: 40vw;
@@ -553,8 +554,9 @@
   line-height: 24.375vw;
   color: #444444;
   margin-right: 0vw;
-  width: 80%;
+  width: 90%;
   margin-bottom: 0vw;
+  text-align: center;
 }
 .footer a {
   text-decoration: underline;

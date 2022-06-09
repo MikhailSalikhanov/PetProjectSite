@@ -118,4 +118,4 @@ map.onmouseout = function(){
     pin.classList.remove('hidden_pin');
 }
 
-document.querySelector('.footer_signature').innerText += window.innerWidth;
+// document.querySelector('.footer_signature').innerHTML += `<br> Current width: ${window.innerWidth} px`;
