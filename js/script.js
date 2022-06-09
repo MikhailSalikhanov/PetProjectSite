@@ -118,4 +118,9 @@ map.onmouseout = function(){
     pin.classList.remove('hidden_pin');
 }
 
-// document.querySelector('.footer_signature').innerHTML += `<br> Current width: ${window.innerWidth} px`;
+document.querySelector('.navigation_mobile_menu').onclick = function(){
+    document.querySelector('.navigation_mobile_menu').classList.toggle('burgerOpen');
+    document.querySelector('.navigation_menu').classList.toggle('burgerOpen');
+
+}
+

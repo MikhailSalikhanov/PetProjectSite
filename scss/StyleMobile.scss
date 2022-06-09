@@ -7,10 +7,8 @@
 };
 
 .wrapper{
-    // position: relative;
     width: adapt(320);
     background: #FFFFFF;
-    // border: 1px red solid;
 }
 
 .navigation{
@@ -38,22 +36,93 @@
             width: adapt(101);
             height: adapt(18);
         }
+
+        &_menu{
+            width: adapt(27);
+            height: adapt(20);
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                width: adapt(27);
+                height: adapt(2);
+                background-color: #000000;
+                transition-duration: 1s;
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: adapt(27);
+                height: adapt(2);
+                background-color: #000000;
+                opacity: 1;
+                transition-duration: 1s;
+            }
+
+            span{
+                position: absolute;
+                top: adapt(9);
+                height: adapt(2);
+                width: adapt(27);
+                background-color: #000000;
+                transition-duration: 1s;
+
+            }
+        }
     }
     
     &_menu{
-        display: none;
-        // width: adapt(374);
-        // font-size: adapt(18);
-        // line-height: adapt(24);
-        // color: #000000;
-        // display: flex;
-        // justify-content: space-between;
-
+        z-index: 3;
+        text-align: center;
+        width: 100%;
+        height: adapt(155);
+        position: absolute;
+        right: 0;
+        top: adapt(-325);
+        display: block;
+        font-size: adapt(20);
+        line-height: adapt(50);
+        color: #000000;
+        background-color: #65a93c;
+        transition-duration: 1s;
         // & a:hover{
         //     opacity: 0.6;
         // }
     }
 }
+
+div.burgerOpen{
+
+    span{
+        opacity: 0;
+        transition-delay: 0.3s;
+    }
+}
+
+
+div.burgerOpen::after{
+    transform: rotate(45deg);
+    bottom: adapt(9);
+    transition-duration: 1s;
+
+}
+
+div.burgerOpen::before{
+    transform: rotate(-45deg);
+    top: adapt(9);
+    transition-duration: 1s;
+}
+
+.navigation_menu.burgerOpen{
+    top: adapt(56);
+    transition-duration: 1s;
+}
+
+
 
 
 .header {
@@ -526,16 +595,13 @@
         }
 
 .hidden_cat{
-    // width: 0px;
-    // visibility: hidden;
-    // transform: scale(0, 0);
+
     opacity: 0;
     transition-duration: 4s;
 }
 
 .unhidden_cat{
     opacity: 1;
-    // transform: scale(1, 1);
     transition-duration: 4s;
 }
 
@@ -648,7 +714,6 @@
             width: adapt(320);
             height: adapt(362);
             order: 2;
-            border: 2px solid green;
         }
 
         .hidden_pin{
