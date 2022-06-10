@@ -11,6 +11,6 @@ Used stack and tools:
   > HTML, CSS, JavaScript, Sass
   > Git, Figma, Photoshop 
 
-Сompletely my work (not including design). It is not "copy-paste project" from courses or "don`t-think-and-repeat project" from Youtube.
+Сompletely my work (not including design). It is not "copy-paste project" from courses or "just-repeat project" from Youtube.
 I'm sure it is not perfect. But it is mine :)
 
